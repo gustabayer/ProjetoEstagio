@@ -18,7 +18,7 @@ Este projeto é uma ferramenta de automação para Recrutamento e Seleção que 
 ## 📦 Instalação
 1. **Clone o projeto** (ou baixe a pasta):
 ```bash
-git clone https://seu-repositorio.git
+git clone https://git@github.com:gustabayer/ProjetoEstagio.git
 cd analisador-cv-ia
 ```
 
