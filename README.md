@@ -19,7 +19,7 @@ Este projeto é uma ferramenta de automação para Recrutamento e Seleção que 
 1. **Clone o projeto** (ou baixe a pasta):
 ```bash
 git clone https://git@github.com:gustabayer/ProjetoEstagio.git
-cd analisador-cv-ia
+cd ProjetoEstagio
 ```
 
 2. **Crie um ambiente virtual** (opcional, mas recomendado):
