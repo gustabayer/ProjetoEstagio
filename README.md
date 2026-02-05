@@ -72,7 +72,7 @@ Detalhes da Avaliação:
 
 ## 📂 Estrutura do Projeto
 ```
-analisador-cv-ia/
+ProjetoEstagio/
 │
 ├── Arquivos/              # Pasta onde você coloca os PDFs
 │   └── curriculo.pdf
