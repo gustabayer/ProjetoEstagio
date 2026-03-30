@@ -61,5 +61,5 @@ def chamar_gemini_para_analise(texto_curriculo, criterios_pesos):
         return dados
 
     except Exception as e:
-        print(f"⚠️ Erro na API (Novo SDK): {e}")
+        print(f"Erro na API (Novo SDK): {e}")
         return {k: 0 for k in lista_criterios}

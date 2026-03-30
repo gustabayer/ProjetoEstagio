@@ -57,9 +57,9 @@ python main.py
 **Exemplo de saída:**
 ```
 ============================================================
-📄 ARQUIVO: candidato_joao.pdf
-🎯 Nível Aplicado: JÚNIOR
-🏆 Pontuação: 85.0 / 100
+ARQUIVO: candidato_joao.pdf
+Nível Aplicado: JÚNIOR
+Pontuação: 85.0 / 100
 Situação: ✅ APROVADO
 ------------------------------------------------------------
 Detalhes da Avaliação:

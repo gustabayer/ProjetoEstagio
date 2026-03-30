@@ -13,7 +13,7 @@ def extrair_texto_pdf_robusto(caminho_arquivo):
                     text_content += extracted + "\n"
         return text_content
     except Exception as e:
-        print(f"⚠️  Erro ao ler arquivo: {e}")
+        print(f"Erro ao ler arquivo: {e}")
         return None
 
 # --- 2. O Sistema ---
@@ -37,15 +37,15 @@ class SistemaRecrutamentoIA:
 # --- 3. Exibição ---
 def mostrar_relatorio(nome_arquivo, resultado):
     print("\n" + "="*60)
-    print(f"📄 ARQUIVO: {nome_arquivo}")
+    print(f"ARQUIVO: {nome_arquivo}")
     
     if "erro" in resultado:
-        print(f"❌ ERRO: {resultado['erro']}")
+        print(f"ERRO: {resultado['erro']}")
         return
 
     status_icon = "✅" if resultado['aprovado'] else "❌"
-    print(f"🎯 Nível Aplicado: {resultado['nivel'].upper()}")
-    print(f"🏆 Pontuação: {resultado['score']} / 100")
+    print(f"Nível Aplicado: {resultado['nivel'].upper()}")
+    print(f"Pontuação: {resultado['score']} / 100")
     print(f"Situação: {status_icon} {'APROVADO' if resultado['aprovado'] else 'REPROVADO'}")
     print("-" * 60)
     print("Detalhes da Avaliação:")
@@ -60,19 +60,19 @@ if __name__ == "__main__":
     
     # Verifica pasta
     if not os.path.exists(pasta):
-        print(f"❌ Erro: A pasta '{pasta}' não existe.")
+        print(f"Erro: A pasta '{pasta}' não existe.")
         exit()
 
     # 1. Mostra o que tem na pasta para facilitar
-    print(f"📂 Arquivos disponíveis em '{pasta}':")
+    print(f"Arquivos disponíveis em '{pasta}':")
     arquivos_disponiveis = [f for f in os.listdir(pasta) if f.lower().endswith('.pdf')]
     
     if not arquivos_disponiveis:
-        print("❌ Nenhum PDF encontrado.")
+        print("Nenhum PDF encontrado.")
         exit()
         
     for arq in arquivos_disponiveis:
-        print(f"   📄 {arq}")
+        print(f"   {arq}")
     
     print("-" * 30)
 
@@ -93,11 +93,11 @@ if __name__ == "__main__":
         
         if texto and len(texto) > 50:
             nivel = input("Qual o nível da vaga? (Aprendiz/Junior/Pleno/Senior): ")
-            print(f"\n🚀 Analisando {nome_digitado}...")
+            print(f"\nAnalisando {nome_digitado}...")
             
             resultado = sistema.processar(texto, nivel)
             mostrar_relatorio(nome_digitado, resultado)
         else:
-            print("⚠️ Erro: PDF vazio ou ilegível.")
+            print("Erro: PDF vazio ou ilegível.")
     else:
-        print(f"❌ Erro: O arquivo '{nome_digitado}' não foi encontrado na pasta '{pasta}'.")
+        print(f"Erro: O arquivo '{nome_digitado}' não foi encontrado na pasta '{pasta}'.")
